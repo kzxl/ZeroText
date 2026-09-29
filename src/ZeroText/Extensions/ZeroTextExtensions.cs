@@ -91,5 +91,23 @@ namespace ZeroText
         /// </summary>
         public static string? NormalizeVnPhone(this string? text, bool international = false)
             => VnMasterDataValidators.NormalizePhone(text, international);
+
+        /// <summary>
+        /// Computes the Levenshtein edit distance against another string.
+        /// </summary>
+        public static int LevenshteinDistance(this string? text, string? other, bool ignoreCase = false)
+            => Matching.FastFuzzyMatch.LevenshteinDistance(text.AsSpan(), other.AsSpan(), ignoreCase);
+
+        /// <summary>
+        /// Computes the normalized Levenshtein similarity ratio (0.0 to 1.0) against another string.
+        /// </summary>
+        public static double FuzzySimilarity(this string? text, string? other, bool ignoreCase = false)
+            => Matching.FastFuzzyMatch.LevenshteinSimilarity(text.AsSpan(), other.AsSpan(), ignoreCase);
+
+        /// <summary>
+        /// Computes the Jaro-Winkler string similarity metric (0.0 to 1.0) against another string.
+        /// </summary>
+        public static double JaroWinklerSimilarity(this string? text, string? other, double prefixScale = 0.1, bool ignoreCase = false)
+            => Matching.FastFuzzyMatch.JaroWinklerSimilarity(text.AsSpan(), other.AsSpan(), prefixScale, ignoreCase);
     }
 }

@@ -7,8 +7,8 @@
     <AssemblyName>ZeroText</AssemblyName>
     <RootNamespace>ZeroText</RootNamespace>
     <PackageId>ZeroText</PackageId>
-    <Description>High-performance, zero-allocation Vietnamese text normalization, SEO slug generation, Circular 200 currency-to-words spelling, and master data validation (MST, CCCD, Phone) for .NET.</Description>
-    <PackageTags>text;localization;vietnamese;normalizer;search;slug;currency-words;tax-code;cccd;phone;zeroplatform</PackageTags>
+    <Description>High-performance, zero-allocation FastFuzzyMatch (Levenshtein, Jaro-Winkler), Vietnamese text normalization, SEO slug generation, Circular 200 currency-to-words spelling, and master data validation (MST, CCCD, Phone) for .NET.</Description>
+    <PackageTags>text;matching;fuzzy;levenshtein;jaro-winkler;localization;vietnamese;normalizer;search;slug;currency-words;tax-code;cccd;phone;zeroplatform</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
   </PropertyGroup>
